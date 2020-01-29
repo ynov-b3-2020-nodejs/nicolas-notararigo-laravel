@@ -23,6 +23,9 @@
                     @if (Route::has('login'))
                     <div class="top-right links">
                         @auth
+                        @if (Auth::user()->name=="user_name")
+                            {{{ Auth::user()->name or Auth::user()->email }}}
+                        @endif
                         <a href="{{ url('/home') }}">Home</a>
                         @else
                         <a href="{{ route('login') }}">Login</a>
