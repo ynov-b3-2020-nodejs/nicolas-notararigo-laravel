@@ -42,7 +42,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#" style="color: #333">Profile</a>
-                            <a class="dropdown-item" href="#" style="color: #333">Settings</a>
+                            <a class="dropdown-item" href="{{ url('/settings') }}" style="color: #333">Settings</a>
                             <a class="dropdown-item" href="{{ url('/logout') }}" style="color: #333">Logout</a>
                         </div>
                     </li>

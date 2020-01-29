@@ -11,7 +11,8 @@
         <a href="/">Return</a>
     </div>
     <div class="content">
-        <form method="POST" action="/register">
+        @include('messages.errors')
+        <form method="POST" action="/settings">
 
             {{ csrf_field() }}
             <div class="form-group">
@@ -25,21 +26,9 @@
             </div>
 
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" name="password">
-            </div>
-
-            <div class="form-group">
-                <label for="password_confirmation">Confirm Pass:</label>
-                <input type="password" class="form-control" id="password_confirmation"
-                       name="password_confirmation">
-            </div>
-
-            <div class="form-group">
-                <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
+                <input type="submit" style="cursor:pointer" type="submit" class="btn btn-primary"/>
             </div>
         </form>
-        @include('messages.errors')
     </div>
 </div>
 @endsection
